@@ -1,0 +1,205 @@
+Screen {
+  background: $background;
+  overflow: hidden hidden;
+}
+
+
+DashboardApp{
+  background: $background;
+  }
+
+#main-layout{
+  layout: horizontal;
+}
+
+/* The custom header for clock and battery */
+TopBar {
+    background: transparent;
+    color: $primary;
+    text-style: bold;
+    align: right top;
+
+}
+
+#time-label {
+    dock: left;
+}
+
+#update-int {
+  border-left: $primary-muted;
+  margin-left: 2;
+}
+
+
+
+/* --- Sidebar --- */
+#sidebar {
+    width: 3fr;
+    max-width: 40;
+    min-width: 30;
+    height: 1fr;
+    border: round $accent;
+    padding: 0 2;
+    overflow-y: auto;
+    scrollbar-size: 0 0;
+    align: left top;
+}
+
+#system-info-body{
+  color: $accent;
+}
+
+ThermalsWidget{
+  border-top: solid $primary-muted;
+}
+
+.widget-title{
+  text-style: bold;
+  color: $primary;
+}
+
+LoadAvgWidget{
+    border-top: solid $primary-muted;
+}
+
+DiskCapWidget{
+    border-top: solid $primary-muted;
+}
+
+DiskIOWidget{
+    border-top: solid $primary-muted;
+}
+
+NetIOWidget{
+    border-top: solid $primary-muted;
+}
+
+
+
+/* --- Right Half --- */
+#right-half {
+    width: 5fr;
+    height: 1fr;
+    layout: vertical;
+}
+
+
+/* --- Right Top Section --- */
+#right-top {
+    height: auto;
+    layout: horizontal;
+    border: round $accent;
+}
+
+
+#cpu {
+    width: 4fr;
+    padding: 0 1;
+}
+
+
+
+#cpu-main {
+  text-style: bold;
+  width: 1fr;
+}
+
+#cpu-main-bar {
+    width: 1fr;
+    height: 1; 
+    text-style: bold;
+}
+
+#cpu-main-label {
+  width: 5;
+  color: $primary;
+}
+
+
+#core-scroll {
+    margin-top: 1;
+    height: auto;
+    max-height: 8;
+    overflow-y: auto;
+    scrollbar-size: 1 1;
+    scrollbar-color: $primary-muted;
+    scrollbar-background: transparent;
+}
+
+#core-grid {
+    layout: grid;
+    grid-size: 2; 
+    grid-columns: 1fr 1fr; 
+    grid-gutter: 0 3; 
+    height: auto; 
+}
+
+.core-info {
+    padding: 0 1;
+    color: $primary;
+  }
+
+
+.core-bar {
+   width: 1fr; 
+   height: 1;
+}
+
+
+
+.core-info .bar--bar {
+    color: $success;
+    background: $panel;
+}
+
+.core-info .bar--complete {
+    color: $error;
+}
+
+.core-info ProgressBar.med-usage .bar--bar {
+    color: $warning; /* Yellow */
+}
+
+.core-info ProgressBar.high-usage .bar--bar {
+    color: $error;
+}
+
+
+#mem {
+    width: 3fr;
+    padding: 0 1;
+    border-left: solid $primary-muted;
+    height: 100%;
+    min-height: 8;
+
+}
+
+
+/* --- Right Bottom Half (Process Widget) --- */
+#proc {
+    height: 1fr; /* Takes up the remaining vertical space */
+    overflow: hidden hidden;
+    background: $background;
+    border: round $accent;
+}
+
+#process-table {
+    background: $background;
+    scrollbar-size: 0 1;
+    scrollbar-color: $primary;
+    scrollbar-background: transparent;
+}
+
+#process-legend{
+    border-top: heavy $primary-muted;
+    height: 2;
+}
+
+#process-header {
+    background: transparent;
+    color: $primary;
+    height: 2;
+    border-bottom: heavy $primary-muted;
+}
+
+

@@ -1,0 +1,31 @@
+[project]
+name = "pulsar"
+version = "0.1.0"
+dependencies = [
+    "click>=8.1.0",
+  "psutil>=7.2.2",
+  "rich>=15.0.0",
+  "textual >= 8.2.8",
+  "py-cpuinfo >= 9.0.0"
+]
+
+[project.scripts]
+pulsar = "pulsar.cli:main"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+include = ["src"]
+typeCheckingMode = "strict"
+# Ruff handles the following
+disableOrganizeImports = true
+reportUnusedImport = "none"
+reportUnusedVariable = "none"
+reportUnusedClass = "none"
+reportUnusedFunction = "none"

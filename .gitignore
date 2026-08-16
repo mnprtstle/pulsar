@@ -1,0 +1,35 @@
+# Virtual environments (Python's node_modules)
+.venv/
+env/
+venv/
+ENV/
+
+# Python bytecode / compiler caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ruff_cache/
+
+# Pulsar app local data outputs (Do not track runtime metrics/logs)
+*.csv
+*.log
+
+# Environment variables and secrets
+.env
+.env.*
+*.env
+*.env.*
+
+# Distribution / packaging artifacts
+dist/
+build/
+*.egg-info/
+.eggs/
+
+
+# OS generated files
+.DS_Store
+Thumbs.db
+dfa
