@@ -1,8 +1,11 @@
 # Pulsar
-
 A terminal system monitor for Linux built with Python, Textual, and psutil.
 
 ![Pulsar screenshot](assets/screenshot.png)
+
+<br>
+
+![Theme collage](assets/collage.png)
 
 ## Features
 
