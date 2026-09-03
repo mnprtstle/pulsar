@@ -1,6 +1,5 @@
 from rich.text import Text
 from textual.color import Color, Gradient
-from textual.widgets import ProgressBar
 
 from .themes import active_theme
 
@@ -96,14 +95,3 @@ def update_progress_bar(
     line.append_tokens(components)
 
     return line
-
-
-def set_progress_bar_color(bar: ProgressBar, percentage: float):
-    if percentage >= 80:
-        bar.remove_class("med-usage")
-        bar.add_class("high-usage")
-    if percentage >= 50:
-        bar.remove_class("high-usage")
-        bar.add_class("med-usage")
-    else:
-        bar.remove_class("high-usage", "med-usage")
